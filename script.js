@@ -1,0 +1,1 @@
+const qrText = document.querySelector('.qr-text')
