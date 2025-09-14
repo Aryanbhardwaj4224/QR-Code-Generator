@@ -62,6 +62,7 @@ select {
 .qr-footer a {
   background-color: var(--secondary-color);
   text-decoration: none;
+  font-size: 20px;
   padding: 14px 36px;
   margin-inline: 8px;
   color: var(--primary-color);
@@ -69,17 +70,35 @@ select {
   border-radius: var(--border-radious);
 }
 .qr-body {
-  margin-top: 30px;
-  display: flex;
+   display: flex;
   justify-content: center;
+  align-items: center;
+  padding: 10px;
+  min-width: 100px;
+  min-height: 100px;
+  max-width: 100%; 
+  max-height: none;  /* prevent height restriction */
 }
 .qr-body img {
   display: none;
-  width: 100px;
-  height: 100px;
+  margin-block: 10px;
+  padding: 20px;
+  border: 0.5px solid var(--border-color);
+  border-radius: var(--border-radious);
+ 
+  
 }
 .disabled {
   pointer-events: none; /* prevents clicks */
-  opacity: 0.5;         /* visual cue */
+  opacity: 0.5; /* visual cue */
   cursor: default;
+}
+@media screen and (max-width:520px){
+    .box{
+        width: 80%;
+    }
+    .qr-footer a{
+        padding: 12px;
+        font-size: 16px;
+    }
 }
